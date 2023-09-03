@@ -19,6 +19,24 @@ def get_combined_dict(dict1, dict2):
 
 
 
+#Exercise 3 function
+def count_letters(input_string):
+    letter_count = {}
+    cleaned_string = input_string.replace(" ", "").lower()
+    for char in cleaned_string:
+        if char.isalpha() and char.islower():
+            if char in letter_count:
+                letter_count[char] += 1
+            else:
+                letter_count[char] = 1
+    return letter_count
+user_input = input("Enter a string: ")
+result = count_letters(user_input)
+print(result)
+
+
+
+
 #Exercise 1 Test
 my_list = [1, 2, 3, 2, 1, 4]
 unique_list = get_unique_list(my_list)
